@@ -259,8 +259,8 @@
     
     #  work with any combination of taxonomic ranks available
     all_ranks <- c(
-      "Kingdom","Phylum","Class","Order","Family","Genus","Species", "Strain")
-    all_prefixes <- c("k__", "p__", "c__", "o__", "f__", "g__", "s__", "t__")
+      "Domain","Kingdom","Phylum","Class","Order","Family","Genus","Species", "Strain")
+    all_prefixes <- c("d__", "k__", "p__", "c__", "o__", "f__", "g__", "s__", "t__")
     
     # split the taxa strings
     taxa_split <- CharacterList(strsplit(taxa_tab[, column_name],sep))
