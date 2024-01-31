@@ -272,7 +272,7 @@
     # get the taxa values
     if(remove.prefix){
         taxa_split <- lapply(
-            taxa_split, gsub, pattern = "([kpcofgst]+)__", replacement = "")
+            taxa_split, gsub, pattern = "([dkpcofgst]+)__", replacement = "")
       taxa_split <- CharacterList(taxa_split)
     }
     # extract by order matches
