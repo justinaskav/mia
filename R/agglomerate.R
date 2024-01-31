@@ -336,13 +336,13 @@ setMethod("mergeFeaturesByRank", signature = c(x = "TreeSummarizedExperiment"),
     # If user wants to remove those columns
     if( remove_empty_ranks ){
         # Get rowData
-        rd <- rowData(x)
+        rd <- rowData(x, ...)
         # Does teh column include data?
         columns_including_data <- apply(rd, 2, function(x){!all(is.na(x))})
         # Subset data so that it includes only columns that include data
         rd <- rd[, columns_including_data]
         # Assign it back to SE
-        rowData(x) <- rd
+        rowData(x, ...) <- rd
     }
     return(x)
 }
